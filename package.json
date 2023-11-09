@@ -1,6 +1,6 @@
 {
   "name": "@themost/data-compat",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "Backwards compatibility polyfills for @themost/data",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
