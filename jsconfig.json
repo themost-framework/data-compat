@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "experimentalDecorators": true,
+        "paths": {
+            "@themost/data-compat/register": [
+                "register/src/index"
+            ],
+            "@themost/data-compat": [
+                "src/index"
+            ]
+        }
+    }
+}
