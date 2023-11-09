@@ -8,3 +8,7 @@ Install `@themost/data-compat` if you are using `@themost/data` with version low
 
     npm i @themost/data-compat
 
+and import `@themost/data-compat/register`
+
+    import '@themost/data-compat/register';
+

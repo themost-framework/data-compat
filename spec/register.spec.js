@@ -1,5 +1,5 @@
 import '@themost/data-compat/register';
-import { DataConfigurationStrategy, SchemaLoaderStrategy } from '@themost/data';
+import { SchemaLoaderStrategy } from '@themost/data';
 import { TestApplication } from './TestApplication';
 
 
