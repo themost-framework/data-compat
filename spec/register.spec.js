@@ -19,6 +19,10 @@ describe('Service', () => {
     })
 
     it('should use readonly fields', async () => {
+
+        const attributes = context.model('Person').attributes;
+        expect(attributes).toBeTruthy();
+
         /**
          * @type {import('@themost/data').SchemaLoaderStrategy}
          */

@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/themost-framework/data-compat#readme",
   "peerDependencies": {
-    "@themost/data": "2.6.40",
+    "@themost/data": "2.6.43",
     "@themost/query": "2.5.9",
     "lodash": "^4.17.21",
     "sprintf-js": "^1.1.2"
