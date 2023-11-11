@@ -2,6 +2,7 @@
 import { DataModel, DataConfigurationStrategy } from '@themost/data';
 import pluralize from 'pluralize';
 
+
 /**
  * @this {DataModel}
  */

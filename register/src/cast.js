@@ -1,6 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import { DataModel } from '@themost/data';
 
+
+function hasOwnProperty(any, name) {
+    return Object.prototype.hasOwnProperty.call(any, name);
+}
+
 /**
  * @this {DataModel}
  * @param {*} obj 
