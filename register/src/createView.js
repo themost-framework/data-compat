@@ -1,4 +1,4 @@
-import { DataModelCreateViewListener as DataModelCreateViewListenerCompat } from './DataModelCreateViewListener';
+import { DataModelCreateViewListener as DataModelCreateViewListenerCompat } from '@themost/data-compat';
 import { DataModelCreateViewListener } from '@themost/data';
 
 

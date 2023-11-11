@@ -1,4 +1,4 @@
-import { DataFieldQueryResolver } from '@themost/data-compat';
+import { DataFieldQueryResolver } from './DataFieldQueryResolver';
 import { DataError } from '@themost/common'; 
 import { QueryField, QueryUtils, QueryFieldRef } from '@themost/query';
 import { isEqual } from 'lodash';
