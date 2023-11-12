@@ -1,5 +1,8 @@
 # @themost/data-compat
 
+[!WARNING]  
+### Important Note: This package has been deprecated. Use [@themost/query-compat](https://github.com/themost-framework/query-compat) instead.
+
 Backwards compatibility polyfills for [@themost/data](https://github.com/themost-framework/data)
 
 ## Usage
