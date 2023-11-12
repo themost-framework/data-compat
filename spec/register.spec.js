@@ -82,10 +82,10 @@ describe('Service', () => {
             'query': [
                 {
                     '$lookup': {
-                      'from': 'Person',
-                      'localField': 'customer',
-                      'foreignField': 'id',
-                      'as': 'customer'
+                        'from': 'Person',
+                        'localField': 'customer',
+                        'foreignField': 'id',
+                        'as': 'customer'
                     }
                 },
                 {
@@ -100,6 +100,50 @@ describe('Service', () => {
         expect(items).toBeTruthy();
         for (const item of items) {
             expect(item.customerDescription).toBeTruthy();
+        }
+    });
+
+    it('should use switch statement', async () => {
+        /**
+         * @type {import('@themost/data').SchemaLoaderStrategy}
+         */
+        const schemaLoader = context.getConfiguration().getStrategy(SchemaLoaderStrategy)
+        /**
+         * @type {import('@themost/data').DataModel}
+         */
+        const model = schemaLoader.getModelDefinition('Product');
+        model.version = '2.5';
+        model.fields.push({
+            '@id': 'http://schema.org/priceDescription',
+            'name': 'priceDescription',
+            'readonly': true,
+            'insertable': false,
+            'editable': false,
+            'type': 'Text',
+            'query': [
+                {
+                    '$project': {
+                        'priceDescription': {
+                            '$cond': [
+                                {
+                                    '$gt': [
+                                        '$price',
+                                        900
+                                    ]
+                                },
+                                'Expensive',
+                                'Normal'
+                            ]
+                        }
+                    }
+                }
+            ]
+        });
+        schemaLoader.setModelDefinition(model);
+        const items = await context.model('Product').silent().take(25).getItems();
+        expect(items).toBeTruthy();
+        for (const item of items) {
+            expect(item.priceDescription).toBeTruthy();
         }
     });
 
